@@ -5,17 +5,17 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout>
   <div
-    class='mx-auto hover:prose-a:text-black prose prose-a:text-accent-500 prose-blockquote:border-l-black prose-blockquote:text-gray-500 prose-code:text-black prose-headings:font-bold prose-headings:text-black prose-headings:tracking-tighter prose-li:marker:text-accent-500 text-gray-500 py-24 prose-pre:border'
+    class='prose-a:text-accent-500 prose-li:marker:text-accent-500 prose mx-auto py-24 text-gray-500 prose-headings:font-bold prose-headings:tracking-tighter prose-headings:text-black hover:prose-a:text-black prose-blockquote:border-l-black prose-blockquote:text-gray-500 prose-code:text-black prose-pre:border'
   >
     <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
 
     <p>{frontmatter.title}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Written by: {frontmatter.author}</p>
-    <div class='flex flex-wrap gap-3 mt-12'>
+    <div class='mt-12 flex flex-wrap gap-3'>
       {
         frontmatter.tags.map((tag: string) => (
-          <span class='inline-flex items-center text-sm font-light text-black dark:text-white  underline hover:text-accent-300'>
+          <span class='hover:text-accent-300 inline-flex items-center text-sm font-light text-black  underline dark:text-white'>
             <a href={`/tags/${tag}`}>{tag}</a>
           </span>
         ))
