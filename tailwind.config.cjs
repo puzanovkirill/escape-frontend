@@ -65,6 +65,7 @@ module.exports = {
       fontFamily: {
         sans: ['Helvetica', ...defaultTheme.fontFamily.sans],
         display: ['Basement', ...defaultTheme.fontFamily.sans],
+        dela: ['Dela Gothic', ...defaultTheme.fontFamily.sans],
       },
     },
   },
